@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+//focus on structure
+
+//reusable , no conflict
+
+//support jQuery (cross-browser, when possible) - already above
+
+//library
+
+( function(global, $){
+
+	var Rafael =  function( f, l ) {
+		return new Rafael.init( f, l );
+	}
+	
+    Rafael.prototype = {};
+
+	Rafael.init = function( f, l ){
+	//properties for func contructor
+		var self = this;
+		self.f = f || '';
+		self.l = l || '';
+	}
+	
+	Rafael.init.prototype = Rafael.prototype;
+	global.Rafael = global.R$ = Rafael;
+
+}( window, $));
+
+
+//app.js
+var x = R$('Rafael','da Costa');
+console.log( x );
+
+
+</script>
+
+</head>
+<body>
+hi	
+</body>
+</html>
+
+
+
+
